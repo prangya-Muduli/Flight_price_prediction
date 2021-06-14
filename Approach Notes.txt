@@ -1,0 +1,13 @@
+1.I did null value ckeck of data .
+2. I extract journey_day, Month from date both for train, test
+3. I extrct time in hrs and min from duration for train ntest data.
+4. Similarly, AArival time ,dep-time in hrs and mns are extracted.
+5.The redundant columns are deleted.
+6.categorical data are handled using  one-hot encoding.
+7. Feature extraction(using extra Tree regressor) and heat map analysis is also done.
+8. then Data train_test_split.
+9.A baseline model of Linear Regression is applied , Model is evaluated using RMSE score 
+with given formula -np.sqrt(np.square(np.log10(final_prediction[:2671] + 1)-np.log10(y_test[:2671]+1)).mean())
+10.With further advancement random forest regressor has better rmse. so i went for hyper parameter tuning using 
+   randomised search cv. and landed upon the result.
+11. I implemented my model on test data to get the final submission.
